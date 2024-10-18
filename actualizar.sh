@@ -37,6 +37,9 @@ echo "__________________________________________________________________________
 
 } > "$archivo_salida"
 
+# Volver un directorio
+cd ..
+
 # Eliminar la carpeta linux-info-update
 rm -rf "$directorio_actual"
 
