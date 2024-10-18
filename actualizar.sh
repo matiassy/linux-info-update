@@ -9,6 +9,7 @@ archivo_salida="$directorio_salida/sistema_info.txt"  # Archivo de salida en un 
 
 # Escribir encabezado en el archivo de salida
 {
+    echo "___________________________________________________________________________________________________________________________________"
     echo "LOCACION: $locacion"
     echo "FECHA: $fecha"
     echo "Actualización de servidor e instancias:"
