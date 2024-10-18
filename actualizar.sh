@@ -1,16 +1,17 @@
 #!/bin/bash
 
 # Variables personalizadas
-locacion="SUCURSAL 9"
+
 nombre_sistema=$(hostname)  # Obtener el nombre del sistema (servidor o instancia)
 fecha=$(date +"%A %d/%m/%Y")  # Fecha actual
-archivo_salida="sistema_info.txt"
-
+directorio_actual=$(pwd)  # Obtener el directorio actual
+archivo_salida="../sistema_info.txt"  # Guardar un directorio antes
+echo "___________________________________________________________________________________________________________________________________"
 # Escribir encabezado en el archivo de salida
 {
     echo "LOCACION: $locacion"
     echo "FECHA: $fecha"
-    echo "SUBTITULO: Actualización de servidor e instancias:"
+    echo "Actualización de servidor e instancias:"
     echo "___________________________________________________________________________________________________________________________________"
     
     # Si es Proxmox, mostrar información específica
@@ -36,5 +37,8 @@ archivo_salida="sistema_info.txt"
 
 } > "$archivo_salida"
 
+# Eliminar la carpeta linux-info-update
+rm -rf "$directorio_actual"
+
 # Mensaje de finalización
-echo "La información se ha guardado en $archivo_salida"
+echo "La información se ha guardado en $archivo_salida y se eliminó la carpeta linux-info-update"
