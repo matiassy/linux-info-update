@@ -49,4 +49,4 @@ rm -rf linux-info-update
 echo "Se eliminó la carpeta linux-info-update"
 
 # Volver al directorio padre nuevamente para ver el archivo
-cd ..
+cd
