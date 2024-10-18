@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Variables personalizadas
-
+locacion="REEMPLAZAR"
 nombre_sistema=$(hostname)  # Obtener el nombre del sistema (servidor o instancia)
 fecha=$(date +"%A %d/%m/%Y")  # Fecha actual
 directorio_actual=$(pwd)  # Obtener el directorio actual
 archivo_salida="../sistema_info.txt"  # Guardar un directorio antes
-echo "___________________________________________________________________________________________________________________________________"
+
 # Escribir encabezado en el archivo de salida
 {
     echo "LOCACION: $locacion"
@@ -37,7 +37,7 @@ echo "__________________________________________________________________________
 
 } > "$archivo_salida"
 
-# Volver un directorio
+# Volver al directorio anterior
 cd ..
 
 # Eliminar la carpeta linux-info-update
