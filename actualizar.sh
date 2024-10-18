@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Variables personalizadas
-locacion="REEMPLAZAR"
+read -p "Ingrese la locación: " locacion
 nombre_sistema=$(hostname)  # Obtener el nombre del sistema (servidor o instancia)
 fecha=$(date +"%A %d/%m/%Y")  # Fecha actual
 directorio_salida=$(dirname "$(pwd)")  # Guardar en un directorio antes del actual
